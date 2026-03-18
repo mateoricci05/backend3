@@ -1,25 +1,22 @@
+# Backend Final - Dockerizado
 
-# PROYECTO FINAL BACKEND - ARQUITECTURA PROFESIONAL
+## Ejecutar con Docker
 
-## Arquitectura Implementada
-- DAO + Repository Pattern
-- DTO para evitar exposición de datos sensibles
-- Middleware de autorización por roles
-- Estrategia Passport JWT 'current'
-- Sistema de recuperación de contraseña con expiración (1 hora)
-- Mailing con Nodemailer
-- Modelo Ticket con lógica de compra profesional
+### Build
+docker build -t backend-final .
 
-## Roles
-- admin → CRUD productos
-- user → carrito y compras
+### Run
+docker run -p 3000:3000 backend-final
 
-## Seguridad
-- JWT en cookies
-- Expiración de reset token
-- Prevención reutilización contraseña
+## Endpoints
+- GET /api/users
+- GET /api/adoptions
+- POST /api/adoptions/:id
 
-## Ejecutar
-npm install
-npm run dev
+## Swagger
+http://localhost:3000/api/docs
 
+## DockerHub
+Subir con:
+docker tag backend-final TUUSUARIO/backend-final
+docker push TUUSUARIO/backend-final

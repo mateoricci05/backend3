@@ -1,22 +1,18 @@
 {
-  "name": "ecommerce-backend-pf-excelencia",
+  "name": "backend-final",
   "version": "1.0.0",
   "type": "module",
-  "main": "src/app.js",
   "scripts": {
-    "start": "node src/app.js",
-    "dev": "nodemon src/app.js"
+    "start": "node src/server.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "dependencies": {
-    "bcrypt": "^5.1.0",
-    "cookie-parser": "^1.4.6",
-    "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^7.6.0",
-    "nodemailer": "^6.9.4",
-    "passport": "^0.7.0",
-    "passport-jwt": "^4.0.1",
-    "uuid": "^9.0.0"
+    "swagger-ui-express": "^4.6.3",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "supertest": "^6.3.0"
   }
 }
