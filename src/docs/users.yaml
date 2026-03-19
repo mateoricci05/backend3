@@ -8,4 +8,42 @@ paths:
       summary: Obtener usuarios
       responses:
         '200':
-          description: Lista de usuarios
+          description: OK
+    post:
+      summary: Crear usuario
+      responses:
+        '201':
+          description: Creado
+  /api/users/{id}:
+    get:
+      summary: Obtener usuario por ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+      responses:
+        '200':
+          description: OK
+        '404':
+          description: Not found
+    put:
+      summary: Actualizar usuario
+      responses:
+        '200':
+          description: OK
+    delete:
+      summary: Eliminar usuario
+      responses:
+        '200':
+          description: Eliminado
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        email:
+          type: string

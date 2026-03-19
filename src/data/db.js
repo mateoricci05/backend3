@@ -1,2 +1,2 @@
-export const pets = [{ id: 1, name: 'Firulais', adopted: false }]
-export const users = [{ id: 1, name: 'Juan' }]
+export let users = [{ id: 1, name: 'Juan', email: 'juan@test.com' }]
+export let pets = [{ id: 1, name: 'Firulais', adopted: false }]
